@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 356" width="1100" height="356" role="img" aria-label="MailOut AI Architecture Diagram">
+  <defs>
+    <linearGradient id="arch-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19080E"/>
+      <stop offset="100%" stop-color="#270914"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#D11D4E"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#C5B5BA"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="2" width="1096" height="352" rx="14" fill="url(#arch-bg)" stroke="#6B0421" stroke-width="2"/>
+  <text x="36" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#C5B5BA">EXTENSION ARCHITECTURE &amp; RUNTIME DATA FLOW</text>
+
+  <!-- Column 1: Gmail UI & Popup/Onboarding -->
+  <rect x="36" y="60" width="220" height="110" rx="10" fill="#320A18" stroke="#90012A" stroke-width="1.8"/>
+  <text x="52" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#EBE4E5">Gmail Web UI</text>
+  <text x="52" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#C5B5BA">mail.google.com/*</text>
+  <text x="52" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.82">• Email &amp; compose toolbars</text>
+  <text x="52" y="151" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.82">• Inline summary &amp; spam cards</text>
+
+  <rect x="36" y="210" width="220" height="110" rx="10" fill="#320A18" stroke="#90012A" stroke-width="1.8"/>
+  <text x="52" y="238" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#EBE4E5">Popup &amp; Onboarding</text>
+  <text x="52" y="260" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#C5B5BA">popup/  onboarding/</text>
+  <text x="52" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.82">• API key, toggles &amp; templates</text>
+  <text x="52" y="301" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.82">• OAuth dashboard &amp; actions</text>
+
+  <!-- Column 2: Content Layer -->
+  <rect x="306" y="60" width="210" height="150" rx="10" fill="#41091C" stroke="#D11D4E" stroke-width="1.8"/>
+  <text x="322" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#EBE4E5">Content Script Layer</text>
+  <text x="322" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#C5B5BA">content/</text>
+  <text x="322" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.86">• content.js (DOM observer)</text>
+  <text x="322" y="156" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.86">• gmail-parser.js (DOM + ID)</text>
+  <text x="322" y="177" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.86">• ui-injector.js (cards/picker)</text>
+  <text x="322" y="198" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#C5B5BA">Syncs toggles via storage</text>
+
+  <!-- Column 3: Service Worker -->
+  <rect x="566" y="60" width="220" height="260" rx="10" fill="#5B051D" stroke="#D11D4E" stroke-width="2"/>
+  <text x="582" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#EBE4E5">Service Worker</text>
+  <text x="582" y="112" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#C5B5BA">background/service-worker.js</text>
+  <line x1="582" y1="126" x2="770" y2="126" stroke="#90012A" stroke-width="1.2"/>
+  <text x="582" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.9">• Central message router</text>
+  <text x="582" y="172" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.9">• Blends AI + heuristic score</text>
+  <text x="582" y="194" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.9">• Manages OAuth token</text>
+  <text x="582" y="216" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#EBE4E5" fill-opacity="0.9">• Seeds defaults on install</text>
+  <rect x="582" y="238" width="188" height="64" rx="7" fill="#320A18" stroke="#90012A" stroke-width="1.2"/>
+  <text x="594" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#EBE4E5">Chrome Storage</text>
+  <text x="594" y="278" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#C5B5BA">sync: apiKey, toggles, templates</text>
+  <text x="594" y="294" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#C5B5BA">local: daily stats, oauthState</text>
+
+  <!-- Column 4: Engines & External APIs -->
+  <rect x="836" y="60" width="228" height="76" rx="10" fill="#320A18" stroke="#D11D4E" stroke-width="1.8"/>
+  <text x="852" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#EBE4E5">Gemini AI Engine</text>
+  <text x="852" y="105" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#C5B5BA">utils/ai.js</text>
+  <text x="852" y="123" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#EBE4E5" fill-opacity="0.82">gemini-2.5-flash-lite REST</text>
+
+  <rect x="836" y="152" width="228" height="76" rx="10" fill="#320A18" stroke="#90012A" stroke-width="1.8"/>
+  <text x="852" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#EBE4E5">Heuristic Spam Scorer</text>
+  <text x="852" y="197" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#C5B5BA">utils/spam-checker.js</text>
+  <text x="852" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#EBE4E5" fill-opacity="0.82">Local 0–100 rules &amp; URL checks</text>
+
+  <rect x="836" y="244" width="228" height="76" rx="10" fill="#320A18" stroke="#90012A" stroke-width="1.8" stroke-dasharray="5 3"/>
+  <text x="852" y="270" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#EBE4E5">Gmail REST API (Optional)</text>
+  <text x="852" y="289" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#C5B5BA">gmail.googleapis.com</text>
+  <text x="852" y="307" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#EBE4E5" fill-opacity="0.82">Metrics, trash &amp; quick actions</text>
+
+  <!-- Connecting Arrows -->
+  <line x1="256" y1="115" x2="300" y2="115" stroke="#D11D4E" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <line x1="516" y1="135" x2="560" y2="135" stroke="#D11D4E" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <line x1="256" y1="265" x2="560" y2="265" stroke="#C5B5BA" stroke-width="2" marker-end="url(#arrow-muted)" marker-start="url(#arrow-muted)"/>
+  <line x1="786" y1="98" x2="830" y2="98" stroke="#D11D4E" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="786" y1="190" x2="830" y2="190" stroke="#D11D4E" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="786" y1="282" x2="830" y2="282" stroke="#C5B5BA" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-muted)"/>
+</svg>
+
