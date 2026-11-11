@@ -32,7 +32,7 @@ Click the **Fork** button on GitHub.
 Then clone your fork:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mail-out.git
+git clone https://github.com/Automate-Workflow/mail-out.git
 cd mail-out
 ```
 
