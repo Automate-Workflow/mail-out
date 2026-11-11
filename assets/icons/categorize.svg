@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Email Categorization">
+  <path d="M 12 16 H 31 L 52 37 L 35 54 L 14 33 V 18 A 2 2 0 0 1 12 16 Z" stroke="#D11D4E" stroke-width="3.2"/>
+  <circle cx="23" cy="25" r="3.5" stroke="#A58E93" stroke-width="3"/>
+  <line x1="27" y1="36" x2="36" y2="45" stroke="#A58E93" stroke-width="3"/>
+</svg>
+
